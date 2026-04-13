@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulting &amp; Expert Witness — Michael A. Santoro</title>
+  <meta name="description" content="Professor Michael A. Santoro's approach to corporate governance — consulting and expert witness practice.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ── Consulting Page ─────────────────────────────── */
+    .consulting-hero {
+      padding-top: 128px;
+      padding-bottom: 72px;
+      border-bottom: 1px solid #E5E5E5;
+    }
+
+    .consulting-hero .container {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      padding-left: 40px;
+    }
+
+    .consulting-hero-text {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .consulting-hero-photo {
+      flex-shrink: 0;
+      width: 180px;
+      margin-right: 40px;
+    }
+
+    .consulting-hero-photo .hero-image-wrapper {
+      width: 180px;
+    }
+
+    .consulting-hero-photo .hero-image {
+      width: 180px;
+      height: 240px;
+      overflow: hidden;
+      background: var(--gray-100);
+    }
+
+    .consulting-hero-photo .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: left center;
+      transform: scale(2) translate(-10%, -15%);
+      transform-origin: left top;
+      filter: none;
+    }
+
+    .consulting-hero .section-label {
+      margin-bottom: 28px;
+    }
+
+    .consulting-hero-heading {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 42px;
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--crimson);
+      margin-bottom: 24px;
+      max-width: 780px;
+    }
+
+    .consulting-hero-sub {
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--gray-600);
+      max-width: 680px;
+      font-style: italic;
+    }
+
+    .consulting-section {
+      padding: 36px 0;
+    }
+
+    .consulting-section .section-body {
+      max-width: none;
+    }
+
+    .consulting-section .section-body + .section-body {
+      margin-top: 16px;
+    }
+
+    .case-study {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .case-study:first-of-type {
+      border-top: 1px solid var(--gray-200);
+    }
+
+    .case-study-title {
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: var(--black);
+      margin-bottom: 10px;
+    }
+
+    .case-study-body {
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.75;
+      max-width: none;
+    }
+
+    .expertise-list {
+      font-size: 15px;
+      color: var(--gray-700);
+      line-height: 1.85;
+      max-width: none;
+    }
+
+    .footer-back {
+      font-size: 13px;
+      color: var(--crimson);
+      font-weight: 500;
+    }
+
+    .footer-back:hover {
+      color: var(--crimson);
+      text-decoration: underline;
+      text-decoration-color: var(--crimson);
+    }
+
+    .footer-inner-consulting {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    @media (max-width: 768px) {
+      .consulting-hero {
+        padding-top: 96px;
+        padding-bottom: 48px;
+      }
+      .consulting-hero .container {
+        flex-direction: column;
+        gap: 32px;
+        padding-left: 24px;
+      }
+      .consulting-hero-photo {
+        width: 100%;
+        margin-right: 0;
+      }
+      .consulting-hero-photo .hero-image-wrapper,
+      .consulting-hero-photo .hero-image {
+        width: 100%;
+        max-width: 180px;
+      }
+      .consulting-hero-heading {
+        font-size: 28px;
+      }
+      .consulting-hero-sub {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Navigation ────────────────────────────────────── -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-name">Michael A. Santoro</a>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="about.html" class="nav-external"><span>About</span></a></li>
+      <li><a href="index.html#current-work">Work</a></li>
+      <li><a href="index.html#books">Books</a></li>
+      <li><a href="consulting.html">Consulting</a></li>
+      <li><a href="index.html#press">Press</a></li>
+    </ul>
+    <a href="index.html#contact" class="nav-cta">Get in Touch</a>
+  </div>
+</nav>
+
+<!-- ── Hero ──────────────────────────────────────────── -->
+<section class="consulting-hero">
+  <div class="container">
+    <div class="consulting-hero-text">
+      <p class="section-label">Consulting &amp; Expert Witness</p>
+      <h1 class="consulting-hero-heading">Professor Santoro&rsquo;s Approach to Corporate Governance</h1>
+      <p class="consulting-hero-sub">There&rsquo;s a huge competitive edge to be gained when your corporate governance hardware is properly aligned to the right ethical standards.</p>
+    </div>
+    <div class="consulting-hero-photo">
+      <div class="hero-image-wrapper">
+        <div class="hero-image">
+          <img src="MAS Lectures.jpeg" alt="Professor Michael A. Santoro">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── The Hardware and Software of Corporate Governance ─ -->
+<section class="section consulting-section">
+  <div class="container">
+    <p class="section-label">The Hardware and Software of Corporate Governance</p>
+    <p class="section-body">While Prof. Santoro has published five books and written other scholarly works on the subject of business ethics, his approach to business ethics has been deeply influenced by over 40 years of research in the field and direct observation. He has been on factory floors in China, corporate board rooms, and research laboratories. His consulting and expert witness work have given him further insights into organizational business ethics successes and failures.</p>
+    <p class="section-body">Prof. Santoro firmly believes that the link between good ethics and good business is ever tightening in the modern business environment. Companies have two mechanisms for successfully managing ethics that are akin to the way your computer works. There&rsquo;s the hardware &mdash; the policies and processes that a company institutionalizes, e.g., its corporate governance documents, code of ethics, and board committees and charges to those committees. Then there&rsquo;s the software &mdash; the company culture, the leadership and tone at the top. Either or both can fail and cause a company to fall below the ethical and legal standards society expects business to maintain.</p>
+    <p class="section-body">Both hardware and software need to work well for a company to succeed. However, the focus of many ethics programs is excessively focused on culture &mdash; it&rsquo;s all about software, in other words.</p>
+    <p class="section-body">Even if you have really good leadership and a great culture, without the right hardware in place, companies are not going to be prepared to meet complex ethical challenges and meet the legal and ethical standards expected of them. It&rsquo;s crucial that companies design their hardware to be effective within their industry, and it&rsquo;s equally crucial that they regularly update their hardware as their business grows to address potential issues before they become a threat to the business.</p>
+  </div>
+</section>
+
+<!-- ── The Governance Gap ────────────────────────────── -->
+<section class="section consulting-section">
+  <div class="container">
+    <p class="section-label">The Governance Gap</p>
+    <p class="section-body">Many companies don&rsquo;t address their hardware problems in a timely fashion. This creates a governance gap &mdash; potentially exposing the company, and in some cases individual board members, to significant financial liabilities. Regrettably, many companies don&rsquo;t appreciate the importance of good governance until after they have been sued.</p>
+    <p class="section-body">Instead of addressing problems after the fact through a litigation process, well run companies can proactively work to set up an appropriate hardware governance structure and avoid damage to reputation and profitability. There&rsquo;s a huge competitive edge to be gained when your hardware is properly aligned to the right ethical standards. Not only does well designed hardware protect the company by helping to assure the company meets its legal and ethical obligations, but the right hardware also guides people to make choices that are both principled and profitable.</p>
+  </div>
+</section>
+
+<!-- ── Hardware and Software Failures ────────────────── -->
+<section class="section consulting-section">
+  <div class="container">
+    <p class="section-label">Hardware and Software Failures</p>
+    <p class="section-body">In many instances, corporate governance failures consist of hardware problems &mdash; necessary information does not flow to the correct persons or clear lines of responsibility do not exist for responding to risk. For example, board members may fail to act because information about ethically problematic issues does not flow up the company chain of command so that they can be managed effectively, or there might not be a board subcommittee with the clearly delineated responsibility for managing an aspect of the business that presents substantial risk.</p>
+    <p class="section-body">In other instances, corporate governance failures consist of software problems. A company may fail to properly monitor, prevent, and manage corporate risk of ethical behavior because of a general corporate culture pervasive in an organization or what is sometimes called tone at the top &mdash; referring to the seriousness with which the top executives of a company communicate about ethical and compliance issues.</p>
+    <p class="section-body">A corrupt or risk insensitive corporate culture will often be accompanied by compensation practices that result in misalignment between executive and employee behavior and the interest of the company and shareholders in risk management, legal compliance, ethical behavior, and long-term economic sustainability.</p>
+  </div>
+</section>
+
+<!-- ── Case Studies ──────────────────────────────────── -->
+<section class="section consulting-section">
+  <div class="container">
+    <p class="section-label">Case Studies</p>
+
+    <div class="case-study">
+      <h3 class="case-study-title">Merck &amp; Co. &mdash; Corporate Governance Reform</h3>
+      <p class="case-study-body">Professor Santoro served as expert witness in <em>Fagin v. Scolnick</em>, a shareholder-derivative suit against corporate officers and directors of Merck &amp; Co. for marketing Vioxx unethically &mdash; which the <em>New York Times</em> called a potentially pivotal moment in the corporate governance arena. As part of the settlement, Merck agreed to adopt a far-ranging series of corporate governance reforms which he helped design, including the appointment of its first Chief Medical Officer.</p>
+    </div>
+
+    <div class="case-study">
+      <h3 class="case-study-title">Wells Fargo &mdash; Institutional Accountability</h3>
+      <p class="case-study-body">Professor Santoro provided expert testimony on the corporate governance reforms undertaken at Wells Fargo in the wake of the scandal over the creation of bogus customer accounts. The presiding judge wrote that Professor Santoro cogently explains why these changes, in many instances long overdue, will benefit shareholders.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Areas of Expertise ────────────────────────────── -->
+<section class="section consulting-section">
+  <div class="container">
+    <p class="section-label">Areas of Expertise</p>
+    <p class="expertise-list">AI Governance &amp; Accountability &middot; Corporate Governance &middot; Expert Witness &middot; Business &amp; Human Rights &middot; Pharmaceutical Industry Ethics &middot; Silicon Valley Ethics &middot; China &amp; International Business</p>
+  </div>
+</section>
+
+<!-- ── Footer ────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner footer-inner-consulting">
+      <span class="footer-name">&copy; 2026 Michael A. Santoro</span>
+      <a href="index.html" class="footer-back">&larr; Back to main site</a>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/michael-santoro-43972324/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=RKDsiboAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://www.scu.edu/business/management/faculty/santoro/" target="_blank" rel="noopener">SCU Profile</a>
+        <a href="https://www.psychologytoday.com/us/contributors/michael-a-santoro-jd-phd" target="_blank" rel="noopener">Psychology Today</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
