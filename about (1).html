@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Professor Santoro — Michael A. Santoro</title>
+    <meta name="description" content="About Professor Michael A. Santoro — Forty years of scholarship and legal practice, now applied to AI accountability.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #FAFAF8;
+            --text: #1a1a1a;
+            --text-secondary: #555;
+            --text-tertiary: #888;
+            --crimson: #A51C30;
+            --crimson-hover: #8a1728;
+            --crimson-light: rgba(165, 28, 48, 0.06);
+            --border: #e0ddd8;
+            --border-light: #eceae5;
+            --serif: 'Georgia', 'Times New Roman', serif;
+            --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --transition: 0.3s ease;
+        }
+
+        html { scroll-behavior: smooth; font-size: 16px; }
+
+        body {
+            font-family: var(--sans);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { color: var(--crimson); text-decoration: none; transition: color var(--transition); }
+        a:hover { color: var(--crimson-hover); }
+        img { max-width: 100%; height: auto; display: block; }
+
+        .container { max-width: 1080px; margin: 0 auto; padding: 0 2rem; }
+
+        /* NAV */
+        .nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            background: rgba(250, 250, 248, 0.92);
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-light);
+        }
+        .nav.scrolled { box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
+        .nav-inner {
+            max-width: 1080px; margin: 0 auto; padding: 0 2rem;
+            display: flex; align-items: center; justify-content: space-between; height: 64px;
+        }
+        .nav-logo { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; color: var(--text); }
+        .nav-links { display: flex; align-items: center; gap: 2rem; }
+        .nav-links a { font-size: 0.85rem; color: var(--text-secondary); }
+        .nav-links a:hover { color: var(--crimson); }
+        .nav-cta {
+            font-size: 0.88rem !important; color: var(--crimson) !important; font-weight: 500;
+            border: 1px solid var(--crimson); padding: 0.4rem 1.1rem; border-radius: 4px;
+        }
+        .nav-cta:hover { background: var(--crimson) !important; color: #fff !important; }
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+        .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); transition: all var(--transition); }
+
+        /* ABOUT HERO */
+        .about-hero {
+            padding: 9rem 0 4rem;
+        }
+        .about-label {
+            font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.14em;
+            color: var(--crimson); font-weight: 500; margin-bottom: 1rem;
+        }
+        .about-hero h1 {
+            font-family: var(--serif); font-size: 2.6rem; font-weight: 600;
+            line-height: 1.2; letter-spacing: -0.02em; max-width: 700px; margin-bottom: 1.5rem;
+        }
+        .about-epigraph {
+            font-family: var(--serif);
+            font-size: 1.05rem;
+            font-style: italic;
+            color: var(--text-secondary);
+            border-left: 3px solid var(--crimson);
+            padding-left: 1.2rem;
+            max-width: 600px;
+        }
+
+        /* PORTRAIT */
+        .about-portrait {
+            margin: 3rem 0;
+            max-width: 420px;
+        }
+        .about-portrait img { border-radius: 6px; }
+
+        /* ABOUT CONTENT */
+        .about-section {
+            padding: 3rem 0;
+            border-top: 1px solid var(--border-light);
+        }
+        .about-section-label {
+            font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.14em;
+            color: var(--crimson); font-weight: 600; margin-bottom: 0.8rem;
+        }
+        .about-section h2 {
+            font-family: var(--serif); font-size: 1.6rem; font-weight: 600;
+            margin-bottom: 1.5rem; letter-spacing: -0.01em;
+        }
+        .about-text {
+            max-width: 780px;
+        }
+        .about-text p {
+            font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1.3rem; line-height: 1.8;
+        }
+        .about-text a { font-weight: 500; }
+
+        /* FOOTER */
+        .about-footer {
+            padding: 3rem 0; border-top: 1px solid var(--border); text-align: center; margin-top: 2rem;
+        }
+        .about-footer p { font-size: 0.82rem; color: var(--text-tertiary); }
+        .about-footer a { font-size: 0.9rem; color: var(--text-secondary); margin: 0 0.5rem; }
+
+        @media (max-width: 700px) {
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .nav-links.open {
+                display: flex; flex-direction: column; position: absolute;
+                top: 64px; left: 0; right: 0; background: var(--bg);
+                border-bottom: 1px solid var(--border); padding: 1.5rem 2rem; gap: 1rem;
+            }
+            .about-hero { padding: 7rem 0 2.5rem; }
+            .about-hero h1 { font-size: 1.9rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">Michael A. Santoro</a>
+            <div class="nav-links" id="navLinks">
+                <a href="about.html">About</a>
+                <a href="index.html#teaching">Teaching</a>
+                <a href="index.html#books">Books</a>
+                <a href="index.html#other-writing">Other Writing</a>
+                <a href="index.html#consulting">Consulting</a>
+                <a href="index.html#press">Press</a>
+                <a href="index.html#contact" class="nav-cta">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="about-hero">
+        <div class="container">
+            <p class="about-label">About</p>
+            <h1>Forty years of scholarship and legal practice, now applied to AI accountability.</h1>
+            <p class="about-epigraph">"Ethical principles matter only insofar as they are transparent, equitable, and enforceable."</p>
+
+            <div class="about-portrait">
+                <img src="https://michaelasantoro-web.vercel.app/MAS%20Green.jpg" alt="Professor Michael A. Santoro">
+            </div>
+        </div>
+    </section>
+
+    <!-- PROFESSOR, ETHICIST, EXPERT WITNESS -->
+    <div class="container">
+        <section class="about-section">
+            <p class="about-section-label">Professor, Ethicist, and Expert Witness</p>
+            <div class="about-text">
+                <p>Professor Michael A. Santoro is one of the most distinctively positioned scholars working on artificial intelligence today with over forty years of work in corporate governance, human rights, and institutional accountability that have led him precisely <em>here</em>.</p>
+                <p>His core conviction is simple yet demanding: ethical principles matter only insofar as they are transparent, equitable, and enforceable. That conviction now finds its most urgent application in AI — where systems are being deployed at scale, where risks are accumulating faster than governance frameworks can respond, and where the question of who is accountable when things go wrong remains largely unanswered.</p>
+                <p>Professor Santoro's answer to that question is upstream intervention. The bigger the stakes, the more important it is to address problems before deployment. He challenges the prevailing assumption that accountability is preserved simply by keeping a human 'in the loop' — arguing instead that when oversight is reduced to reviewing AI outputs after the fact, responsibility becomes a fiction. When AI systems structure how governments allocate resources, how employers screen candidates, how healthcare decisions are made, the moment for accountability is not after the damage is done. It is in the design, authorization, and governance of the system itself.</p>
+            </div>
+        </section>
+
+        <!-- TEACHING -->
+        <section class="about-section">
+            <p class="about-section-label">Teaching</p>
+            <div class="about-text">
+                <p>At Santa Clara University, Professor Santoro teaches business ethics in the Department of Management and Entrepreneurship at the Leavey School of Business, where he has been a faculty member since 2016. He also serves as a Faculty Fellow at the Markkula Center for Applied Ethics and co-directs the Tech2Equity Partnership with the Black Women's Health Imperative, formed to reduce racial disparities in healthcare through responsible technology. He chaired the Leavey School's Rank and Tenure Committee from 2022 to 2024.</p>
+                <p>He is a practitioner of the Harvard case method — an approach to teaching that emphasizes guided discussion, real-world decision-making, and experiential learning. As a Research Associate at Harvard Business School, he authored numerous case studies and teaching notes, and he has conducted "train the trainers" seminars on case method teaching for both business and law faculty.</p>
+                <p>He was voted Professor of the Year by Rutgers MBA students and received the AACSB Innovations that Inspire Award. He served as a Fellow of the Rutgers Business School Teaching Excellence Center and as a GE Teaching Fellow.</p>
+                <p>His teaching career spans decades and continents. Before joining Santa Clara, he spent nearly twenty years at Rutgers Business School, rising from Assistant Professor to full Professor. He has been a visiting faculty member at the University of Notre Dame's Mendoza College of Business, the Shanghai Advanced Institute of Finance at Shanghai Jiao Tong University, the Sinopec Management Institute in Beijing, and the University of Zurich. At Harvard's Kennedy School of Government, he taught ethics and economics courses as a Lecturer and Adjunct Lecturer.</p>
+            </div>
+        </section>
+
+        <!-- LEGAL FOUNDATION -->
+        <section class="about-section">
+            <p class="about-section-label">The Legal Foundation</p>
+            <div class="about-text">
+                <p>What makes Professor Santoro's perspective distinctive is the legal foundation beneath the scholarship. He holds a J.D. from New York University School of Law, where he served as Articles Editor of the NYU Annual Survey of American Law, and has been a member of the New York and Connecticut bars since 1982.</p>
+                <p>Before entering academia, he practiced at some of the most prominent firms in New York — clerking at Skadden, Arps, Slate, Meagher & Flom and working as an associate at Webster & Sheffield. He then served as General Counsel for two companies, including BioTechnica International, one of the first publicly held biotechnology companies in the United States.</p>
+                <p>He has served as an expert witness in high-profile federal cases — including Merck's corporate governance reforms following the Vioxx scandal and the Wells Fargo fake-account litigation — and his work helped shape the governance frameworks adopted as part of those settlement agreements.</p>
+                <p>He does not simply theorize about institutional accountability. He has built it, enforced it, and testified about it in federal courts.</p>
+                <p><a href="index.html#consulting">Read more about his consulting and expert witness work →</a></p>
+            </div>
+        </section>
+
+        <!-- SCHOLARSHIP -->
+        <section class="about-section">
+            <p class="about-section-label">Scholarship Across Fields</p>
+            <div class="about-text">
+                <p>Professor Santoro's scholarship spans business ethics, business and human rights, bioethics, pharmaceutical ethics, and China business ethics — fields united by a sustained concern for the gap between normative commitments and real-world enforcement.</p>
+                <p>He is the author or co-author of five books published by Cambridge University Press, Cornell University Press, and Routledge, including <em>Profits and Principles: Global Capitalism and Human Rights in China</em>, which pioneered the "fair share theory" of corporate human rights responsibility; <em>Wall Street Values: Business Ethics and the Global Financial Crisis</em>; <em>China 2020</em>; <em>Ethics and the Pharmaceutical Industry</em>; and <em>A China Business Primer: Ethics, Culture, and Relationships</em>. A sixth book, <em>Pragmatism and Business Ethics</em> (with Robert Shanklin), is forthcoming from Cambridge University Press.</p>
+                <p>His research has appeared in leading journals including <em>Manufacturing & Service Operations Management</em>, <em>Philosophy & Technology</em>, the <em>American Journal of Bioethics</em>, the <em>Journal of Human Rights</em>, and <em>Business Ethics Quarterly</em>. His paper on machine learning and racial bias in medical appointment scheduling received the M&SOM Best Paper Award and the INFORMS Minority Issues Forum Best Paper Award.</p>
+                <p>He has written for general audiences in <em>The New Yorker</em>, <em>Psychology Today</em>, and <em>The Hill</em>.</p>
+                <p><a href="index.html#books">See books →</a> · <a href="index.html#other-writing">See full scholarship →</a></p>
+            </div>
+        </section>
+
+        <!-- INSTITUTIONAL LEADERSHIP -->
+        <section class="about-section">
+            <p class="about-section-label">Institutional Leadership</p>
+            <div class="about-text">
+                <p>He co-founded the Business and Human Rights Journal at Cambridge University Press and served as its Co-Editor-in-Chief from 2014 to 2022. He co-founded the Global Business and Human Rights Scholars Association and served as its first president. He has served on the editorial boards of <em>Business Ethics Quarterly</em> and the <em>Journal of Human Rights</em> for two decades.</p>
+                <p>At Santa Clara University, he directs the MAS Business Ethics and Human Rights Lab — one of the first undergraduate research labs of its kind — where students work alongside him on cutting-edge research at the intersection of AI, accountability, and human rights. He also co-founded the Data Justice Lab, which advises public institutions and nonprofit organizations on AI governance and algorithmic accountability.</p>
+            </div>
+        </section>
+
+        <!-- PUBLIC ENGAGEMENT -->
+        <section class="about-section">
+            <p class="about-section-label">Public Engagement &amp; Service</p>
+            <div class="about-text">
+                <p>Professor Santoro has testified before the United States Senate Finance Committee on the human rights implications of China's WTO accession. He served as Ethics Advisor to the Global Business Coalition for HIV/AIDS, Tuberculosis and Malaria, where he led the organization's UN Global Compact accession and developed a bilingual corporate code of conduct for A to Z Textile Mills in Arusha, Tanzania — supporting bed net manufacturing and distribution across East Africa. He has served as a bioethics adviser to the International Foundation for Autoimmune Arthritis.</p>
+                <p>He is a frequent speaker on business ethics, AI accountability, human rights, and institutional governance, having presented at Stanford Law School, the London School of Economics, Princeton University, Columbia University, Cornell University, the Federal Reserve Bank of New York, the Brookings Institution, the Commonwealth Club of San Francisco, the Asia Society, the NYU Philosophy Department, Johns Hopkins Department of Computer Science, and numerous other institutions.</p>
+                <p>For a full historical perspective see <a href="https://en.wikipedia.org/wiki/Michael_A._Santoro">Professor Santoro's Wikipedia page →</a></p>
+            </div>
+        </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="about-footer">
+        <div class="container">
+            <p style="margin-bottom: 1rem;"><a href="index.html">← Back to main site</a></p>
+            <p>&copy; 2026 Michael A. Santoro</p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
+        });
+    </script>
+</body>
+</html>
