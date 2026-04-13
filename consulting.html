@@ -10,6 +10,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <style>
+    /* ── Consulting Tags ────────────────────────────── */
+    .consulting-area-tags { display: flex; flex-wrap: nowrap; gap: 8px; margin-bottom: 24px; }
+    .consulting-area-tag { font-size: 11px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--crimson); border: 1px solid var(--crimson); padding: 6px 14px; }
+
     /* ── Consulting Page ─────────────────────────────── */
     .consulting-hero {
       padding-top: 128px;
@@ -67,14 +71,14 @@
       line-height: 1.15;
       color: var(--crimson);
       margin-bottom: 24px;
-      max-width: 780px;
+      max-width: none;
     }
 
     .consulting-hero-sub {
       font-size: 17px;
       line-height: 1.65;
       color: var(--gray-600);
-      max-width: 680px;
+      max-width: none;
       font-style: italic;
     }
 
@@ -196,69 +200,44 @@
       <p class="section-label">Consulting &amp; Expert Witness</p>
       <h1 class="consulting-hero-heading">Professor Santoro&rsquo;s Approach to Corporate Governance</h1>
       <p class="consulting-hero-sub">There&rsquo;s a huge competitive edge to be gained when your corporate governance hardware is properly aligned to the right ethical standards.</p>
+      <div class="consulting-area-tags" style="margin-top: 24px; margin-bottom: 0;">
+        <span class="consulting-area-tag">Pharmaceutical Industry Ethics</span>
+        <span class="consulting-area-tag">Business and Human Rights</span>
+        <span class="consulting-area-tag">China</span>
+        <span class="consulting-area-tag">Corporate Governance</span>
+        <span class="consulting-area-tag">Wall Street Values</span>
+        <span class="consulting-area-tag">Silicon Valley Ethics</span>
+      </div>
     </div>
-    <div class="consulting-hero-photo">
+  </div>
+</section>
+
+<!-- ── Main Content ─────────────────────────────────── -->
+<section class="section consulting-section">
+  <div class="container">
+    <div class="consulting-hero-photo" style="float: left; margin-right: 40px; margin-bottom: 16px;">
       <div class="hero-image-wrapper">
         <div class="hero-image">
           <img src="MAS Lectures.jpeg" alt="Professor Michael A. Santoro">
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ── The Hardware and Software of Corporate Governance ─ -->
-<section class="section consulting-section">
-  <div class="container">
-    <p class="section-label">The Hardware and Software of Corporate Governance</p>
-    <p class="section-body">While Prof. Santoro has published five books and written other scholarly works on the subject of business ethics, his approach to business ethics has been deeply influenced by over 40 years of research in the field and direct observation. He has been on factory floors in China, corporate board rooms, and research laboratories. His consulting and expert witness work have given him further insights into organizational business ethics successes and failures.</p>
-    <p class="section-body">Prof. Santoro firmly believes that the link between good ethics and good business is ever tightening in the modern business environment. Companies have two mechanisms for successfully managing ethics that are akin to the way your computer works. There&rsquo;s the hardware &mdash; the policies and processes that a company institutionalizes, e.g., its corporate governance documents, code of ethics, and board committees and charges to those committees. Then there&rsquo;s the software &mdash; the company culture, the leadership and tone at the top. Either or both can fail and cause a company to fall below the ethical and legal standards society expects business to maintain.</p>
+    <p class="section-body">Prof. Santoro firmly believes that the link between good ethics and good business is ever tightening in the modern business environment. Companies have two mechanisms for successfully managing ethics that are akin to the way your computer works. There&rsquo;s the hardware &mdash; the policies and processes that a company institutionalizes, e.g., its corporate governance documents, code of ethics, and board committees and charges to those committees. Then there&rsquo;s the software &mdash; the company culture, the leadership and &ldquo;tone at the top.&rdquo; Either or both can fail and cause a company to fall below the ethical and legal standards society expects business to maintain.</p>
     <p class="section-body">Both hardware and software need to work well for a company to succeed. However, the focus of many ethics programs is excessively focused on culture &mdash; it&rsquo;s all about software, in other words.</p>
     <p class="section-body">Even if you have really good leadership and a great culture, without the right hardware in place, companies are not going to be prepared to meet complex ethical challenges and meet the legal and ethical standards expected of them. It&rsquo;s crucial that companies design their hardware to be effective within their industry, and it&rsquo;s equally crucial that they regularly update their hardware as their business grows to address potential issues before they become a threat to the business.</p>
-  </div>
-</section>
-
-<!-- ── The Governance Gap ────────────────────────────── -->
-<section class="section consulting-section">
-  <div class="container">
-    <p class="section-label">The Governance Gap</p>
-    <p class="section-body">Many companies don&rsquo;t address their hardware problems in a timely fashion. This creates a governance gap &mdash; potentially exposing the company, and in some cases individual board members, to significant financial liabilities. Regrettably, many companies don&rsquo;t appreciate the importance of good governance until after they have been sued.</p>
-    <p class="section-body">Instead of addressing problems after the fact through a litigation process, well run companies can proactively work to set up an appropriate hardware governance structure and avoid damage to reputation and profitability. There&rsquo;s a huge competitive edge to be gained when your hardware is properly aligned to the right ethical standards. Not only does well designed hardware protect the company by helping to assure the company meets its legal and ethical obligations, but the right hardware also guides people to make choices that are both principled and profitable.</p>
-  </div>
-</section>
-
-<!-- ── Hardware and Software Failures ────────────────── -->
-<section class="section consulting-section">
-  <div class="container">
-    <p class="section-label">Hardware and Software Failures</p>
-    <p class="section-body">In many instances, corporate governance failures consist of hardware problems &mdash; necessary information does not flow to the correct persons or clear lines of responsibility do not exist for responding to risk. For example, board members may fail to act because information about ethically problematic issues does not flow up the company chain of command so that they can be managed effectively, or there might not be a board subcommittee with the clearly delineated responsibility for managing an aspect of the business that presents substantial risk.</p>
-    <p class="section-body">In other instances, corporate governance failures consist of software problems. A company may fail to properly monitor, prevent, and manage corporate risk of ethical behavior because of a general corporate culture pervasive in an organization or what is sometimes called tone at the top &mdash; referring to the seriousness with which the top executives of a company communicate about ethical and compliance issues.</p>
+    <p class="section-body">Unfortunately, many companies don&rsquo;t address their hardware problems in a timely fashion. This creates a governance gap potentially exposing the company and even in some cases individual Board members to large financial liabilities. Regrettably, many companies don&rsquo;t appreciate the importance of good governance until after they have been sued and suffer financial liabilities.</p>
+    <p class="section-body">Instead of addressing problems after the fact, through a litigation process, well run companies can proactively work to set up an appropriate hardware governance structure and avoid damage to reputation and profitability. There&rsquo;s a huge competitive edge to be gained when your hardware is properly aligned to the right ethical standards. Not only does well designed hardware protect the company by helping to assure the company meets its legal and ethical obligations, but the right hardware also guides people to make choices that are both principled and profitable.</p>
+    <p class="section-label" style="margin-top: 40px; font-size: 16px;">Corporate Governance: Hardware and Software Failures</p>
+    <p class="section-body">In many instances, corporate governance failures consist of &ldquo;hardware&rdquo; problems&mdash;necessary information does not flow to the correct persons or clear lines of responsibility do not exist for responding to risk. For example, board members may fail to act because information about ethically problematic issues does not flow up the company chain of command so that they can be managed effectively or there might not be a board subcommittee with the clearly delineated responsibility for managing an aspect of the business that presents substantial risk.</p>
+    <p class="section-body">A company may fail to properly monitor, prevent, and manage corporate risk of ethical behavior because of a general &ldquo;corporate culture&rdquo; pervasive in an organization or what is sometimes called &ldquo;tone at the top&rdquo;, referring to the seriousness (or lack thereof) with which the top executives of a company communicate about ethical and compliance issues.</p>
+    <p class="section-body">In other instances, corporate governance failures consist of &ldquo;software&rdquo; problems. A company may fail to properly monitor, prevent, and manage corporate risk of ethical behavior because of a general &ldquo;corporate culture&rdquo; pervasive in an organization or what is sometimes called &ldquo;tone at the top&rdquo;, referring to the seriousness (or lack thereof) with which the top executives of a company communicate about ethical and compliance issues.</p>
     <p class="section-body">A corrupt or risk insensitive corporate culture will often be accompanied by compensation practices that result in misalignment between executive and employee behavior and the interest of the company and shareholders in risk management, legal compliance, ethical behavior, and long-term economic sustainability.</p>
-  </div>
-</section>
+    <p class="section-body">For a case study on hardware/software failures, read my assessment of the rationale and impact behind the reforms at Merck as part of the settlement of the Fagin case: <em>Corporate Governance Reform At Merck: A Pharmaceutical Industry Standard for the 21st Century</em>.</p>
+    <p class="section-body">Another example of the hardware/software issue happening today is the Wells Fargo settlement with shareholders as a result of their fake-account scandal. For an in-depth look at the impact of corporate governance failure, read my <em>Declaration of Approval for the Derivative Settlement</em>.</p>
 
-<!-- ── Case Studies ──────────────────────────────────── -->
-<section class="section consulting-section">
-  <div class="container">
-    <p class="section-label">Case Studies</p>
-
-    <div class="case-study">
-      <h3 class="case-study-title">Merck &amp; Co. &mdash; Corporate Governance Reform</h3>
-      <p class="case-study-body">Professor Santoro served as expert witness in <em>Fagin v. Scolnick</em>, a shareholder-derivative suit against corporate officers and directors of Merck &amp; Co. for marketing Vioxx unethically &mdash; which the <em>New York Times</em> called a potentially pivotal moment in the corporate governance arena. As part of the settlement, Merck agreed to adopt a far-ranging series of corporate governance reforms which he helped design, including the appointment of its first Chief Medical Officer.</p>
-    </div>
-
-    <div class="case-study">
-      <h3 class="case-study-title">Wells Fargo &mdash; Institutional Accountability</h3>
-      <p class="case-study-body">Professor Santoro provided expert testimony on the corporate governance reforms undertaken at Wells Fargo in the wake of the scandal over the creation of bogus customer accounts. The presiding judge wrote that Professor Santoro cogently explains why these changes, in many instances long overdue, will benefit shareholders.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ── Areas of Expertise ────────────────────────────── -->
-<section class="section consulting-section">
-  <div class="container">
-    <p class="section-label">Areas of Expertise</p>
-    <p class="expertise-list">AI Governance &amp; Accountability &middot; Corporate Governance &middot; Expert Witness &middot; Business &amp; Human Rights &middot; Pharmaceutical Industry Ethics &middot; Silicon Valley Ethics &middot; China &amp; International Business</p>
+    <p class="section-label" style="margin-top: 40px; font-size: 16px;">Accelerating Digital Innovation Inside and Out: Agile Teams Ecosystems, and Ethics</p>
+    <p class="section-body">&ldquo;You can have the best ethical code of conduct in the world, and you can nail it to the wall as the employees walk in,&rdquo; Santoro says. &ldquo;But if you don&rsquo;t have an ethical culture to support it, you&rsquo;ve really got not very much.&rdquo;</p>
+    <p class="section-body">In the 2019 Digital Business Report, MIT SMR and Deloitte&rsquo;s survey analysis and executive interviews unveil the distinctive characteristics of innovation in digitally maturing organizations. Ecosystems and cross-functional teams allow them to be agile, but this increased agility demands a thorough consideration of governance as well.</p>
   </div>
 </section>
 

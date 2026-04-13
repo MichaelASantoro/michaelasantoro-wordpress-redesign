@@ -29,10 +29,19 @@
     .venues-grid span { font-size: 14px; color: var(--gray-600); padding: 3px 0; }
     .teaching-photo { max-width: 480px; margin-bottom: 24px; }
     .teaching-photo img { width: 100%; display: block; }
-    .consulting-area-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+    .consulting-area-tags { display: flex; flex-wrap: nowrap; gap: 8px; margin-bottom: 24px; }
     .consulting-area-tag { font-size: 11px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--crimson); border: 1px solid var(--gray-200); padding: 6px 14px; }
     .lab-quote { font-size: 16px; font-style: italic; color: var(--gray-600); line-height: 1.6; padding-left: 20px; border-left: 3px solid var(--crimson); margin-bottom: 24px; }
     @media (max-width: 768px) { .video-grid { grid-template-columns: 1fr; } .venues-grid { grid-template-columns: 1fr; } }
+    .book-item:hover .book-cover-wrap { opacity: 0.85; }
+    .book-modal-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 2000; justify-content: center; align-items: center; }
+    .book-modal-overlay.active { display: flex; }
+    .book-modal { background: #fff; max-width: 900px; width: 90%; max-height: 85vh; overflow-y: auto; padding: 48px; position: relative; }
+    .book-modal-close { position: absolute; top: 12px; right: 16px; background: none; border: none; font-size: 28px; cursor: pointer; color: var(--gray-400); line-height: 1; }
+    .book-modal-close:hover { color: var(--black); }
+    .book-modal-text h3 { font-size: 20px; font-weight: 600; color: var(--black); margin-bottom: 6px; line-height: 1.3; }
+    .book-modal-publisher { font-size: 13px; color: var(--gray-400); margin-bottom: 20px; }
+    .book-modal-desc { font-size: 15px; color: var(--gray-600); line-height: 1.75; }
   </style>
 </head>
 <body>
@@ -44,7 +53,6 @@
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links">
-      <li><a href="about.html" class="nav-external"><span>About</span></a></li>
       <li><a href="#teaching">Teaching</a></li>
       <li><a href="#books">Books</a></li>
       <li><a href="#other-writing">Other Writing</a></li>
@@ -65,10 +73,10 @@
         <p class="cred-muted">Leavey School of Business, Santa Clara University</p>
       </div>
       <div class="hero-bio">
-        <p>Michael A. Santoro is a Professor of Management and Entrepreneurship at the Leavey School of Business at Santa Clara University. His teaching, research, and public work focus on business ethics, corporate governance, professional responsibility, and the human rights implications of emerging technologies, including artificial intelligence.</p>
-        <p>Santoro&rsquo;s recent scholarship examines how AI and data-driven systems shape equity, accountability, and institutional decision-making, particularly in health care and other high-stakes domains.</p>
-        <p>His research has appeared in leading academic journals, including <em>Manufacturing &amp; Service Operations Management</em>.</p>
+        <p>With decades of scholarship in corporate governance, human rights, and business ethics &mdash; and a legal career spanning corporate law, federal testimony, and expert witness work in high-profile cases &mdash; Professor Santoro brings the precise expertise to address the most pressing question asked today: <strong>who is accountable when AI systems fail?</strong></p>
+        <p>Now, he helps governments, institutions, and legal practitioners close the gap between where AI decisions are made and where accountability is triggered &mdash; challenging the prevailing assumption of human oversight after deployment. His work argues that accountability must be structured into AI systems at the point of design and delegation.</p>
       </div>
+      <a href="MAS CV.pdf" target="_blank" rel="noopener" class="hero-contact">View CV &rarr;</a>
     </div>
     <div class="hero-photo">
       <div class="hero-image-wrapper">
@@ -79,10 +87,11 @@
       <div class="hero-education">
         <p class="hero-education-label">Education</p>
         <ul>
-          <li><span class="edu-deg">Ph.D., Public Policy</span> <span class="edu-inst">&middot; Harvard University</span></li>
-          <li><span class="edu-deg">J.D.</span> <span class="edu-inst">&middot; New York University School of Law</span></li>
-          <li><span class="edu-deg">B.A., Government</span> <span class="edu-inst">&middot; Oberlin College</span></li>
-          <li><span class="edu-deg">Fulbright Fellow</span> <span class="edu-inst">&middot; University of Hong Kong</span></li>
+          <li><span class="edu-deg">Ph.D., Public Policy</span> <span class="edu-inst">&middot; Harvard University, 1997</span></li>
+          <li><span class="edu-deg">M.P.A.</span> <span class="edu-inst">&middot; Harvard University, 1990</span></li>
+          <li><span class="edu-deg">J.D.</span> <span class="edu-inst">&middot; New York University School of Law, 1981</span></li>
+          <li><span class="edu-deg">A.B.</span> <span class="edu-inst">&middot; Oberlin College, 1976</span></li>
+          <li><span class="edu-deg">Fulbright Fellow</span> <span class="edu-inst">&middot; University of Hong Kong, 1993&ndash;1994</span></li>
         </ul>
       </div>
     </div>
@@ -95,10 +104,7 @@
 
 <section class="section" id="teaching">
   <div class="container">
-    <p class="section-label">Teaching &amp; Speaking</p>
-    <div class="teaching-photo">
-      <img src="https://www.michaelasantoro.com/wp-content/uploads/2019/03/Michael-Santoro-Headshot-Gray-Wide-1-e1553203849331.jpg" alt="Professor Santoro">
-    </div>
+    <p class="section-label">Teaching</p>
     <p class="section-body"><strong>Michael A. Santoro</strong> is Professor of Management and Entrepreneurship at the Leavey School of Business at Santa Clara University. Previously he was a Professor at Rutgers Business School for two decades. As a Research Associate at Harvard Business School, Prof. Santoro authored numerous case studies and teaching notes. He practices the Harvard &ldquo;case method&rdquo; of teaching which emphasizes guided discussion, decision-making, and experiential learning for students. He has given a number of &ldquo;train the trainers&rdquo; seminars on the art and science of case method teaching for both business and law faculty.</p>
     <p class="section-body">Prof. Santoro was voted &ldquo;Professor of the Year&rdquo; by Rutgers MBA students in 2013. He was a Fellow of the RBS Teaching Excellence Center and has also served as a GE Teaching Fellow.</p>
     <p class="section-body">Prof. Santoro has been a visiting faculty member at the University of Notre Dame, the Shanghai Advanced Institute of Finance at Shanghai Jiao Tong University, the Sinopec Management Institute in Beijing, and the University of Zurich, as well as an Adjunct Lecturer and Teaching Fellow at Harvard&rsquo;s John F. Kennedy School of Government where he taught ethics and economics courses.</p>
@@ -117,7 +123,7 @@
     <div class="video-grid">
       <div class="video-card">
         <div class="video-embed"><iframe src="https://player.vimeo.com/video/320379062" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
-        <div class="video-info"><p class="video-number">#1 &mdash; Start Here</p><h4>Business Ethics: Three Levels of Analysis</h4><p class="duration">6 minutes</p></div>
+        <div class="video-info"><p class="video-number">#1</p><h4>Business Ethics: Three Levels of Analysis</h4><p class="duration">6 minutes</p></div>
       </div>
       <div class="video-card">
         <div class="video-embed"><iframe src="https://player.vimeo.com/video/320378212" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
@@ -132,7 +138,12 @@
         <div class="video-info"><p class="video-number">#4</p><h4>Ethics and Law</h4><p class="duration">7 minutes</p></div>
       </div>
     </div>
-    <div class="video-deeper"><strong>For a deeper dive into ethical theory...</strong><br>Watch Prof. Santoro&rsquo;s 22-minute lecture on making business decisions using the Harvard Business School&rsquo;s &ldquo;Moral Framework.&rdquo;</div>
+    <div class="video-deeper" style="display: flex; align-items: center; gap: 24px;">
+      <div style="flex: 1;"><strong>For a deeper dive into ethical theory...</strong><br>Watch Prof. Santoro&rsquo;s 22-minute lecture on making business decisions using the Harvard Business School&rsquo;s &ldquo;Moral Framework.&rdquo;</div>
+      <div style="flex: 1; min-width: 0;">
+        <div class="video-embed"><iframe src="https://player.vimeo.com/video/324836247" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -140,11 +151,25 @@
   <div class="container">
     <p class="section-label">Books</p>
     <div class="books-grid">
-      <div class="book-item"><div class="book-cover-wrap"><img src="A China Business Primer Cover.jpg" alt="A China Business Primer book cover"></div><h3 class="book-item-title">A China Business Primer:<span class="book-subtitle">Ethics, Culture, and Relationships</span></h3><p class="book-item-publisher">Routledge, 2021</p></div>
-      <div class="book-item"><div class="book-cover-wrap"><img src="Wall Street Values Cover.jpg" alt="Wall Street Values book cover"></div><h3 class="book-item-title">Wall Street Values:<span class="book-subtitle">Business Ethics and the Global Financial Crisis</span></h3><p class="book-item-publisher">Cambridge UP, 2013</p></div>
-      <div class="book-item"><div class="book-cover-wrap"><img src="Ethics and the Pharma Industry Cover.jpg" alt="Ethics and the Pharmaceutical Industry book cover"></div><h3 class="book-item-title">Ethics and the Pharmaceutical Industry</h3><p class="book-item-publisher">Cambridge UP, 2005</p></div>
-      <div class="book-item"><div class="book-cover-wrap"><img src="China 2020 Cover.jpg" alt="China 2020 book cover"></div><h3 class="book-item-title">China 2020:<span class="book-subtitle">How Western Business Can &mdash; and Should &mdash; Influence Social and Political Change in the Coming Decade</span></h3><p class="book-item-publisher">Cornell UP, 2009</p></div>
-      <div class="book-item"><div class="book-cover-wrap"><img src="Profits and Principles Cover.avif" alt="Profits and Principles book cover"></div><h3 class="book-item-title">Profits and Principles:<span class="book-subtitle">Global Capitalism and Human Rights in China</span></h3><p class="book-item-publisher">Cornell UP, 2000</p></div>
+      <div class="book-item" onclick="openBookModal(0)" style="cursor:pointer;"><div class="book-cover-wrap"><img src="A China Business Primer Cover.jpg" alt="A China Business Primer book cover"></div><h3 class="book-item-title">A China Business Primer:<span class="book-subtitle">Ethics, Culture, and Relationships</span></h3><p class="book-item-publisher">Routledge, 2021</p></div>
+      <div class="book-item" onclick="openBookModal(1)" style="cursor:pointer;"><div class="book-cover-wrap"><img src="Wall Street Values Cover.jpg" alt="Wall Street Values book cover"></div><h3 class="book-item-title">Wall Street Values:<span class="book-subtitle">Business Ethics and the Global Financial Crisis</span></h3><p class="book-item-publisher">Cambridge UP, 2013</p></div>
+      <div class="book-item" onclick="openBookModal(2)" style="cursor:pointer;"><div class="book-cover-wrap"><img src="Ethics and the Pharma Industry Cover.jpg" alt="Ethics and the Pharmaceutical Industry book cover"></div><h3 class="book-item-title">Ethics and the Pharmaceutical Industry</h3><p class="book-item-publisher">Cambridge UP, 2005</p></div>
+      <div class="book-item" onclick="openBookModal(3)" style="cursor:pointer;"><div class="book-cover-wrap"><img src="China 2020 Cover.jpg" alt="China 2020 book cover"></div><h3 class="book-item-title">China 2020:<span class="book-subtitle">How Western Business Can &mdash; and Should &mdash; Influence Social and Political Change in the Coming Decade</span></h3><p class="book-item-publisher">Cornell UP, 2009</p></div>
+      <div class="book-item" onclick="openBookModal(4)" style="cursor:pointer;"><div class="book-cover-wrap"><img src="Profits and Principles Cover.avif" alt="Profits and Principles book cover"></div><h3 class="book-item-title">Profits and Principles:<span class="book-subtitle">Global Capitalism and Human Rights in China</span></h3><p class="book-item-publisher">Cornell UP, 2000</p></div>
+    </div>
+
+    <!-- Book Modal -->
+    <div class="book-modal-overlay" id="bookModal" onclick="if(event.target===this)closeBookModal()">
+      <div class="book-modal">
+        <button class="book-modal-close" onclick="closeBookModal()">&times;</button>
+        <div class="book-modal-content">
+          <div class="book-modal-text">
+            <h3 id="bookModalTitle"></h3>
+            <p class="book-modal-publisher" id="bookModalPublisher"></p>
+            <p class="book-modal-desc" id="bookModalDesc"></p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -185,14 +210,6 @@
 <section class="section" id="consulting">
   <div class="container">
     <p class="section-label">Consulting &amp; Expert Witness Work</p>
-    <div class="consulting-area-tags">
-      <span class="consulting-area-tag">Pharmaceutical Industry Ethics</span>
-      <span class="consulting-area-tag">Business and Human Rights</span>
-      <span class="consulting-area-tag">China</span>
-      <span class="consulting-area-tag">Corporate Governance</span>
-      <span class="consulting-area-tag">Wall Street Values</span>
-      <span class="consulting-area-tag">Silicon Valley Ethics</span>
-    </div>
     <p class="section-body">Prof. Santoro firmly believes that the link between good ethics and good business is ever tightening in the modern business environment. Companies have two mechanisms for successfully managing ethics that are akin to the way your computer works. There&rsquo;s the hardware &mdash; the policies and processes that a company institutionalizes. Then there&rsquo;s the software &mdash; the company culture, the leadership and &ldquo;tone at the top.&rdquo;</p>
     <p class="section-body">There&rsquo;s a huge competitive edge to be gained when your hardware is properly aligned to the right ethical standards. Not only does well designed hardware protect the company, but the right hardware also guides people to make choices that are both principled and profitable.</p>
     <a href="consulting.html" class="hero-contact">Read more &rarr;</a>
@@ -228,9 +245,9 @@
     <p class="section-label">MAS Business Ethics &amp; Human Rights Lab</p>
     <p class="lab-quote">Cultivating a community that centers ethics and human rights at the heart of Jesuit business education and research.</p>
     <p class="section-body">As the economy grows to be increasingly globalized, businesses all over the world face more human rights challenges. From supply chain to PR, every aspect of a business and decision made interacts with business ethics.</p>
-    <p class="section-body">Researchers in the Michael Santoro Business Ethics and Human Rights Lab (MS BEHR), along with professionals across the globe, explore these interactions to identify business models that address human rights. The lab is research based and composed of skilled undergraduates chosen by Professor of Management and Entrepreneurship Michael Santoro.</p>
-    <p class="section-body">The MS BEHR is one of the first undergraduate research labs of its kind. Through working closely with Professor Santoro&rsquo;s recent research, fellows think critically about current human rights challenges across multiple industries.</p>
-    <a href="https://www.scu.edu/business/management/beyond-the-classroom/MSBEHR" target="_blank" rel="noopener" class="hero-contact">Read more about the MS BEHR on the SCU website &rarr;</a>
+    <p class="section-body">Researchers in the Michael A. Santoro Business Ethics and Human Rights Lab (MAS BEHR), along with professionals across the globe, explore these interactions to identify business models that address human rights. The lab is research based and composed of skilled undergraduates chosen by Professor of Management and Entrepreneurship Michael Santoro.</p>
+    <p class="section-body">The MAS BEHR is one of the first undergraduate research labs of its kind. Through working closely with Professor Santoro&rsquo;s recent research, fellows think critically about current human rights challenges across multiple industries.</p>
+    <a href="https://www.scu.edu/business/management/beyond-the-classroom/MSBEHR" target="_blank" rel="noopener" class="hero-contact">Read more &rarr;</a>
   </div>
 </section>
 
@@ -239,8 +256,7 @@
     <p class="section-label">Contact</p>
     <div class="contact-grid">
       <a href="mailto:santoro.michael@gmail.com" class="contact-card"><p class="contact-card-label">Email</p><p class="contact-card-value">santoro.michael@gmail.com</p></a>
-      <a href="https://www.scu.edu/business/management/faculty/santoro/" target="_blank" rel="noopener" class="contact-card"><p class="contact-card-label">University</p><p class="contact-card-value">Santa Clara University<br>Leavey School of Business</p></a>
-      <a href="#lab" class="contact-card"><p class="contact-card-label">Lab</p><p class="contact-card-value">MAS Business Ethics &amp;<br>Human Rights Lab</p></a>
+      <div class="contact-card"><p class="contact-card-label">Address</p><p class="contact-card-value">Leavey School of Business<br>Santa Clara University<br>500 El Camino Real<br>Santa Clara, CA 95053</p></div>
     </div>
   </div>
 </section>
@@ -260,13 +276,64 @@
       <span class="footer-name">&copy; 2026 Michael A. Santoro</span>
       <div class="footer-links">
         <a href="https://www.linkedin.com/in/michael-santoro-43972324/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://scholar.google.com/citations?user=RKDsiboAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
-        <a href="https://www.scu.edu/business/management/faculty/santoro/" target="_blank" rel="noopener">SCU Profile</a>
+        <a href="https://en.wikipedia.org/wiki/Michael_A._Santoro" target="_blank" rel="noopener">Wikipedia</a>
         <a href="https://www.psychologytoday.com/us/contributors/michael-a-santoro-jd-phd" target="_blank" rel="noopener">Psychology Today</a>
       </div>
     </div>
   </div>
 </footer>
 
+<script>
+var books = [
+  {
+    cover: "A China Business Primer Cover.jpg",
+    title: "A China Business Primer: Ethics, Culture, and Relationships",
+    publisher: "Michael A. Santoro and Robert Shanklin (Routledge Press, 2021)",
+    desc: "The COVID-19 pandemic underscored longstanding fissures in China\u2019s business relationships with the West. If the West is going to develop a relationship of mutual trust and improve business relations with China in the coming decades, it is imperative to understand how to engage with Chinese thinking on ethics in business\u2015this book explains how.\n\nGovernment officials, businesspeople, and business-ethicists have trouble communicating about issues in ethics, policy, and business across the China-West divide. This book shows how to overcome the us-versus-them mindset plaguing China-West relations by presenting to Western audiences an easy-to-understand yet deeply informed primer on core ideas and perspectives in Chinese cultural and philosophical thought. The book considers original texts of Chinese philosophy and religion, and applies principles from those writings to three business-ethics topics of enduring interest to business executives, government officials, and academics, namely, the protection of intellectual property, assurance of product safety and quality in the pharmaceutical supply chain, and human rights.\n\nThis book is a must-read for those who want to forge constructive relationships with their Chinese counterparts based on mutual trust and understanding. The book is specifically relevant to business executives, but it should also be of interest to policymakers, educators, and students who seek to communicate more effectively with their Chinese counterparts, in particular about difficult and contentious business, policy, and ethical issues."
+  },
+  {
+    cover: "Wall Street Values Cover.jpg",
+    title: "Wall Street Values: Business Ethics and the Global Financial Crisis",
+    publisher: "Michael A. Santoro and Ronald J. Strauss (Cambridge University Press, 2013)",
+    desc: "This timely book answers complex and perplexing questions raised by Wall Street\u2019s role in the financial crisis. What are the economic and moral connections between Wall Street and the overall economy? How did we arrive at this point in history where our most powerful financial institutions thwart rather than promote free markets, prosperity, and even social cohesion? Can the fractured relationship between Wall Street and Main Street be repaired? Wall Street Values chronicles the transformation of Wall Street\u2019s business model from serving clients to proprietary trading and explains how this shift undermined the ethical foundations of the modern financial industry. Michael A. Santoro and Ronald J. Strauss argue that post-millennial Wall Street is not only \u201ctoo big to fail\u201d but also a threat to the economy even when it succeeds.\n\nThey describe how, more than a year before the government acknowledged the financial crisis, Wall Street icon Goldman Sachs saved itself by misleading its clients and impeding the information flow needed for the efficient functioning of free markets, thereby prolonging the mortgage bubble and adding to the financial and human cost of the crisis. They also present a nuanced critique of the government\u2019s role not only for the economic miscalculations leading to financial deregulation but also for failing to check the irrational exuberance of 2007 and 2008. Looking to the future, Santoro and Strauss make a compelling case for vigorous government enforcement of the Dodd-Frank Act in the face of Wall Street\u2019s opposition. They also argue, however, that effective government regulation is not enough; economic prosperity will be sustainable only if Wall Street professionals themselves begin an urgently needed conversation about their values and business ethics."
+  },
+  {
+    cover: "Ethics and the Pharma Industry Cover.jpg",
+    title: "Ethics and the Pharmaceutical Industry",
+    publisher: "Michael A. Santoro and Thomas M. Gorrie, Editors (Cambridge University Press, 2005)",
+    desc: "Michael A. Santoro, Professor of business ethics, and Thomas M. Gorrie, an industry executive, have invited representatives of government and NGOs, top industry executives, doctors, and scholars to share their views on the most vital and controversial moral issues facing the pharmaceutical industry today.\n\nWhere do the lines begin and end between the pharmaceutical industry\u2019s responsibility to society and to its own profit/loss considerations? The authors consider this question across a range of activities, including research and clinical trials, drug pricing, patent protection, and advertising and marketing to doctors and patients."
+  },
+  {
+    cover: "China 2020 Cover.jpg",
+    title: "China 2020: How Western Business Can \u2014 and Should \u2014 Influence Social and Political Change in the Coming Decade",
+    publisher: "Cornell University Press, 2009",
+    desc: "Chinese society is plagued by many problems that have a direct impact on its current and future business and political environment\u2015worker rights, product safety, Internet freedom, and the rule of law. Drawing on knowledge gained through personal interviews, documentary sources, and almost two decades of visits to China, Michael A. Santoro offers a clear-eyed view of the various internal forces\u2015such as regionalism, corruption, and growing inequality\u2015that will determine the direction and pace of economic, social, and political change. Of special interest is Santoro\u2019s assessment of the role of multinational corporations in fostering or undermining social and political progress.\n\nSantoro offers a fresh and innovative way of thinking about two questions that have preoccupied Western observers for decades. What will be the effect of economic reform and prosperity on political reform? How can companies operate with moral integrity and ethics in China? In China 2020, Santoro unifies these hitherto separate questions and demonstrates that moral integrity (or lack of it) by Western business will have a profound impact on whether economic privatization and growth usher in greater democracy and respect for human rights."
+  },
+  {
+    cover: "Profits and Principles Cover.avif",
+    title: "Profits and Principles: Global Capitalism and Human Rights in China",
+    publisher: "Cornell University Press, 2000",
+    desc: "After the Tiananmen Square massacre, a vigorous international debate erupted, not only about human rights in China, but also about the role of multinational firms. Should corporations do business in China at all? Should corporations take a stand on such issues? Revelations about serious and pervasive human rights violations in Chinese factories raised even more questions about the clash of profits and principles in China.\n\nMichael Santoro investigates these and other dilemmas, exploring the democratic values firms impart to their employees and the values firms often compromise in pursuit of profits. His interviews with foreign business executives, Chinese employees of foreign firms, human rights advocates, and foreign consular officials provide a range of perspectives. His examination of business responsibility for human rights in China also serves as a unique framework for assessing the broader social trends\u2015both positive and negative\u2015arising from globalization.\n\nSantoro discusses the implications of business activities for U.S. foreign policy and provides practical management advice for business executives operating in China and for those considering doing so. Surprisingly, he finds that President Clinton\u2019s program of \u201ccomprehensive engagement,\u201d which has drawn severe criticism, may in fact create a positive human rights \u201cspin-off.\u201d Santoro\u2019s \u201cfair-share\u201d theory is a unique and thoughtful effort to draw the line between what moral principles do and do not require of businesses operating in China."
+  }
+];
+
+function openBookModal(i) {
+  var b = books[i];
+  document.getElementById('bookModalTitle').textContent = b.title;
+  document.getElementById('bookModalPublisher').textContent = b.publisher;
+  document.getElementById('bookModalDesc').innerHTML = b.desc.replace(/\n\n/g, '</p><p class="book-modal-desc">');
+  document.getElementById('bookModal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeBookModal() {
+  document.getElementById('bookModal').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeBookModal();
+});
+</script>
 </body>
 </html>

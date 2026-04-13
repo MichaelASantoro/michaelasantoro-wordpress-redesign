@@ -168,7 +168,7 @@ img {
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 0 0 40px;
 }
 
 /* ── Hero / Faculty Profile Header ───────────────────── */
@@ -1001,7 +1001,7 @@ img {
 /* ── Contact ─────────────────────────────────────────── */
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 24px;
 }
 
