@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Michael A. Santoro — Professor, Consultant, Speaker</title>
+  <meta name="description" content="Michael A. Santoro is a Professor of Management and Entrepreneurship at Santa Clara University. His work focuses on business ethics, corporate governance, human rights, and AI accountability.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .video-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-bottom: 24px; }
+    .video-card { border: 1px solid var(--gray-200); border-radius: 4px; overflow: hidden; }
+    .video-embed { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+    .video-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+    .video-info { padding: 16px; }
+    .video-info .video-number { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--crimson); margin-bottom: 4px; }
+    .video-info h4 { font-size: 15px; font-weight: 500; color: var(--black); margin-bottom: 2px; }
+    .video-info .duration { font-size: 12px; color: var(--gray-400); }
+    .video-deeper { padding: 20px 24px; background: #F7F7F5; border: 1px solid var(--gray-200); font-size: 14px; color: var(--gray-600); line-height: 1.7; }
+    .writing-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
+    .writing-list li { padding: 12px 0; border-bottom: 1px solid var(--gray-200); font-size: 14px; color: var(--gray-600); line-height: 1.65; }
+    .writing-list li:first-child { border-top: 1px solid var(--gray-200); }
+    .writing-list a { color: var(--black); font-weight: 500; }
+    .writing-list a:hover { color: var(--crimson); }
+    .writing-list .coauthor { font-size: 12px; color: var(--gray-400); }
+    .venues-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 40px; }
+    .venues-grid span { font-size: 14px; color: var(--gray-600); padding: 3px 0; }
+    .teaching-photo { max-width: 480px; margin-bottom: 24px; }
+    .teaching-photo img { width: 100%; display: block; }
+    .consulting-area-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+    .consulting-area-tag { font-size: 11px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--crimson); border: 1px solid var(--gray-200); padding: 6px 14px; }
+    .lab-quote { font-size: 16px; font-style: italic; color: var(--gray-600); line-height: 1.6; padding-left: 20px; border-left: 3px solid var(--crimson); margin-bottom: 24px; }
+    @media (max-width: 768px) { .video-grid { grid-template-columns: 1fr; } .venues-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-name">Michael A. Santoro</a>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="about.html" class="nav-external"><span>About</span></a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#books">Books</a></li>
+      <li><a href="#other-writing">Other Writing</a></li>
+      <li><a href="#consulting">Consulting</a></li>
+      <li><a href="#press">Press</a></li>
+      <li><a href="#lab">Lab</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-main">
+      <h1 class="hero-name">Professor<br>Michael A. Santoro,<br>J.D., Ph.D.</h1>
+      <div class="hero-credentials">
+        <p class="cred-dark">Professor of Management &amp; Entrepreneurship</p>
+        <p class="cred-muted">Leavey School of Business, Santa Clara University</p>
+      </div>
+      <div class="hero-bio">
+        <p>Michael A. Santoro is a Professor of Management and Entrepreneurship at the Leavey School of Business at Santa Clara University. His teaching, research, and public work focus on business ethics, corporate governance, professional responsibility, and the human rights implications of emerging technologies, including artificial intelligence.</p>
+        <p>Santoro&rsquo;s recent scholarship examines how AI and data-driven systems shape equity, accountability, and institutional decision-making, particularly in health care and other high-stakes domains.</p>
+        <p>His research has appeared in leading academic journals, including <em>Manufacturing &amp; Service Operations Management</em>.</p>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <div class="hero-image-wrapper">
+        <div class="hero-image">
+          <img src="Professor Santoro Profile.png" alt="Professor Michael A. Santoro">
+        </div>
+      </div>
+      <div class="hero-education">
+        <p class="hero-education-label">Education</p>
+        <ul>
+          <li><span class="edu-deg">Ph.D., Public Policy</span> <span class="edu-inst">&middot; Harvard University</span></li>
+          <li><span class="edu-deg">J.D.</span> <span class="edu-inst">&middot; New York University School of Law</span></li>
+          <li><span class="edu-deg">B.A., Government</span> <span class="edu-inst">&middot; Oberlin College</span></li>
+          <li><span class="edu-deg">Fulbright Fellow</span> <span class="edu-inst">&middot; University of Hong Kong</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="credentials-strip">
+  <p>Member of the New York Bar &middot; Expert Witness in Federal Cases &middot; U.S. Senate Testimony &middot; M&amp;SOM Best Paper Award &middot; Co-Founder, Business &amp; Human Rights Journal (Cambridge UP)</p>
+</div>
+
+<section class="section" id="teaching">
+  <div class="container">
+    <p class="section-label">Teaching &amp; Speaking</p>
+    <div class="teaching-photo">
+      <img src="https://www.michaelasantoro.com/wp-content/uploads/2019/03/Michael-Santoro-Headshot-Gray-Wide-1-e1553203849331.jpg" alt="Professor Santoro">
+    </div>
+    <p class="section-body"><strong>Michael A. Santoro</strong> is Professor of Management and Entrepreneurship at the Leavey School of Business at Santa Clara University. Previously he was a Professor at Rutgers Business School for two decades. As a Research Associate at Harvard Business School, Prof. Santoro authored numerous case studies and teaching notes. He practices the Harvard &ldquo;case method&rdquo; of teaching which emphasizes guided discussion, decision-making, and experiential learning for students. He has given a number of &ldquo;train the trainers&rdquo; seminars on the art and science of case method teaching for both business and law faculty.</p>
+    <p class="section-body">Prof. Santoro was voted &ldquo;Professor of the Year&rdquo; by Rutgers MBA students in 2013. He was a Fellow of the RBS Teaching Excellence Center and has also served as a GE Teaching Fellow.</p>
+    <p class="section-body">Prof. Santoro has been a visiting faculty member at the University of Notre Dame, the Shanghai Advanced Institute of Finance at Shanghai Jiao Tong University, the Sinopec Management Institute in Beijing, and the University of Zurich, as well as an Adjunct Lecturer and Teaching Fellow at Harvard&rsquo;s John F. Kennedy School of Government where he taught ethics and economics courses.</p>
+    <p class="subsection-label" style="margin-top: 40px;">Speaking</p>
+    <p class="section-body">Prof. Santoro is a frequent featured speaker on business ethics, pharmaceutical industry ethics, human rights, and financial industry ethics at numerous venues, including:</p>
+    <div class="venues-grid">
+      <span>Stanford Law School</span><span>University of Pennsylvania</span><span>University of Milan</span><span>Redlands University</span><span>The London School of Economics</span><span>George Washington University</span><span>The Shanghai Academy of Social Sciences</span><span>Tufts University</span><span>Cornell University</span><span>Federal Reserve Bank of New York</span><span>Columbia University</span><span>The Brookings Institution</span><span>Oberlin College</span><span>World Affairs Council</span><span>Pace University</span><span>Economic Strategy Institute</span><span>Emory University</span><span>The Association of the Bar of the City of New York</span><span>Princeton University</span><span>The Commonwealth Club of San Francisco</span><span>Pomona College</span><span>The Asia Society</span><span>The Keck Institute</span><span>American Bar Association</span><span>The University of North Carolina</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="videos">
+  <div class="container">
+    <p class="section-label">Business Ethics Videos</p>
+    <p class="section-body" style="margin-bottom: 24px;">Below you will find an introduction to business ethics. The whole cycle of videos takes approximately 24 minutes to complete.</p>
+    <div class="video-grid">
+      <div class="video-card">
+        <div class="video-embed"><iframe src="https://player.vimeo.com/video/320379062" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="video-info"><p class="video-number">#1 &mdash; Start Here</p><h4>Business Ethics: Three Levels of Analysis</h4><p class="duration">6 minutes</p></div>
+      </div>
+      <div class="video-card">
+        <div class="video-embed"><iframe src="https://player.vimeo.com/video/320378212" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="video-info"><p class="video-number">#2</p><h4>What Is Ethics</h4><p class="duration">7 minutes</p></div>
+      </div>
+      <div class="video-card">
+        <div class="video-embed"><iframe src="https://player.vimeo.com/video/320378741" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="video-info"><p class="video-number">#3</p><h4>Ethics and Profits</h4><p class="duration">4 minutes</p></div>
+      </div>
+      <div class="video-card">
+        <div class="video-embed"><iframe src="https://player.vimeo.com/video/320375992" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="video-info"><p class="video-number">#4</p><h4>Ethics and Law</h4><p class="duration">7 minutes</p></div>
+      </div>
+    </div>
+    <div class="video-deeper"><strong>For a deeper dive into ethical theory...</strong><br>Watch Prof. Santoro&rsquo;s 22-minute lecture on making business decisions using the Harvard Business School&rsquo;s &ldquo;Moral Framework.&rdquo;</div>
+  </div>
+</section>
+
+<section class="section" id="books">
+  <div class="container">
+    <p class="section-label">Books</p>
+    <div class="books-grid">
+      <div class="book-item"><div class="book-cover-wrap"><img src="A China Business Primer Cover.jpg" alt="A China Business Primer book cover"></div><h3 class="book-item-title">A China Business Primer:<span class="book-subtitle">Ethics, Culture, and Relationships</span></h3><p class="book-item-publisher">Routledge, 2021</p></div>
+      <div class="book-item"><div class="book-cover-wrap"><img src="Wall Street Values Cover.jpg" alt="Wall Street Values book cover"></div><h3 class="book-item-title">Wall Street Values:<span class="book-subtitle">Business Ethics and the Global Financial Crisis</span></h3><p class="book-item-publisher">Cambridge UP, 2013</p></div>
+      <div class="book-item"><div class="book-cover-wrap"><img src="Ethics and the Pharma Industry Cover.jpg" alt="Ethics and the Pharmaceutical Industry book cover"></div><h3 class="book-item-title">Ethics and the Pharmaceutical Industry</h3><p class="book-item-publisher">Cambridge UP, 2005</p></div>
+      <div class="book-item"><div class="book-cover-wrap"><img src="China 2020 Cover.jpg" alt="China 2020 book cover"></div><h3 class="book-item-title">China 2020:<span class="book-subtitle">How Western Business Can &mdash; and Should &mdash; Influence Social and Political Change in the Coming Decade</span></h3><p class="book-item-publisher">Cornell UP, 2009</p></div>
+      <div class="book-item"><div class="book-cover-wrap"><img src="Profits and Principles Cover.avif" alt="Profits and Principles book cover"></div><h3 class="book-item-title">Profits and Principles:<span class="book-subtitle">Global Capitalism and Human Rights in China</span></h3><p class="book-item-publisher">Cornell UP, 2000</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="other-writing">
+  <div class="container">
+    <p class="section-label">Other Writing</p>
+    <p class="subsection-label">Op-Eds and Blogs</p>
+    <ul class="writing-list">
+      <li><a href="https://www.business-humanrights.org/en/blog/lessons-of-covid-19-vaccines-for-progressive-utopians/">&ldquo;Lessons of COVID-19 Vaccines for Progressive Utopians&rdquo;</a>, Business &amp; Human Rights Resource Centre, February 10, 2021</li>
+      <li><a href="https://www.pacificcouncil.org/newsroom/avocado-toast-wall-paradox-china%E2%80%99s-rise">&ldquo;The Avocado Toast on the Wall: The Paradox of China&rsquo;s Rise&rdquo;</a>, Pacific Council on International Policy, May 15, 2018 <span class="coauthor">(With Robert Shanklin)</span></li>
+      <li><a href="https://thehill.com/opinion/finance/367259-trickle-in-economics-how-dems-should-talk-about-infrastructure-spending">&ldquo;&lsquo;Trickle in&rsquo; economics: How Dems should talk about infrastructure investment&rdquo;</a>, The Hill, January 5, 2018</li>
+      <li><a href="https://blogs.lse.ac.uk/businesshumanrights/2015/11/06/un-forum-series-numbers-lingua-franca-business-human-rights/">&ldquo;Outside-In and Inside-Out Human Rights Measurement Tools&rdquo;</a>, LSE Forum Series, September 2015</li>
+      <li><a href="https://www.newyorker.com/business/currency/can-a-disgraced-trader-get-a-job-in-academia">&ldquo;Can A Disgraced Trader Get A Job in Academia?&rdquo;</a>, The New Yorker, January 22, 2014</li>
+      <li><a href="https://www.newyorker.com/business/currency/why-the-jpmorgan-settlement-falls-short">&ldquo;Why the JPMorgan Settlement Falls Short&rdquo;</a>, The New Yorker, September 18, 2013</li>
+      <li><a href="https://www.newyorker.com/business/currency/would-better-regulations-have-prevented-the-london-whale-trades">&ldquo;Would Better Regulations Have Prevented the London Whale Trades?&rdquo;</a>, The New Yorker, August 21, 2013</li>
+      <li><a href="https://www.newyorker.com/news/news-desk/big-fish-little-fish-and-the-s-e-c">&ldquo;Big Fish, Little Fish, and the S.E.C.&rdquo;</a>, The New Yorker, August 2, 2013</li>
+      <li><a href="https://www.newyorker.com/news/news-desk/why-havent-the-s-e-c-s-lawyers-held-wall-street-accountable">&ldquo;Why Haven&rsquo;t the S.E.C.&rsquo;s Lawyers Held Wall Street Accountable?&rdquo;</a>, The New Yorker, July 31, 2013</li>
+      <li><a href="https://foreignpolicy.com/2009/11/17/should-ldcs-love-mncs/">&ldquo;Should LDCs Love MNCs?&rdquo;</a>, Foreign Policy, January/February 2002</li>
+      <li><a href="https://www.nytimes.com/1994/03/11/opinion/IHT-the-pressure-on-china-needs-flexibility-and-focus.html">&ldquo;The Pressure on China Needs Flexibility and Focus&rdquo;</a>, International Herald Tribune, March 11, 1994</li>
+    </ul>
+    <p class="subsection-label" style="margin-top: 40px;">Articles</p>
+    <ul class="writing-list">
+      <li>&ldquo;Human rights obligations of drug companies,&rdquo; <em>Journal of Human Rights</em>, Vol. 19, No. 5, 2020 <span class="coauthor">(With Robert Shanklin)</span></li>
+      <li>&ldquo;Business and Human Rights in Historical Perspective,&rdquo; <em>Journal of Human Rights</em>, Vol. 14, No. 2, 2015</li>
+      <li>&ldquo;The Ethics and Economics of Pharmaceutical Pricing,&rdquo; <em>Annual Review of Pharmacology and Toxicology</em>, Vol. 55, 2015 <span class="coauthor">(With Sara Parker-Lue and Greg Koski)</span></li>
+      <li>&ldquo;Too big and too interconnected to fail,&rdquo; <em>International Journal of Sustainable Economy</em>, Vol. 4, No. 4, 2012 <span class="coauthor">(With Ronald J. Strauss)</span></li>
+      <li>&ldquo;Post-Westphalia and its Discontents,&rdquo; <em>Business Ethics Quarterly</em>, Vol. 20, No. 2, 2010</li>
+      <li>&ldquo;Pharmaceutical Policy in China,&rdquo; <em>Health Affairs</em>, Vol. 27, No. 4, 2008 <span class="coauthor">(With Qiang Sun et al.)</span></li>
+      <li>&ldquo;Beyond Codes of Conduct and Monitoring,&rdquo; <em>Human Rights Quarterly</em>, Vol. 25, No. 2, 2003</li>
+      <li>&ldquo;Global Capitalism and the Road to Chinese Democracy,&rdquo; <em>Current History</em>, Vol. 99, No. 638, 2000</li>
+      <li>&ldquo;Engagement with Integrity,&rdquo; <em>Business &amp; the Contemporary World</em>, Vol. X, No. 1, 1998</li>
+      <li>&ldquo;The WTO and Workers&rsquo; Rights,&rdquo; <em>Harvard Journal of World Affairs</em>, Vol. III, No. 1, 1995</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="consulting">
+  <div class="container">
+    <p class="section-label">Consulting &amp; Expert Witness Work</p>
+    <div class="consulting-area-tags">
+      <span class="consulting-area-tag">Pharmaceutical Industry Ethics</span>
+      <span class="consulting-area-tag">Business and Human Rights</span>
+      <span class="consulting-area-tag">China</span>
+      <span class="consulting-area-tag">Corporate Governance</span>
+      <span class="consulting-area-tag">Wall Street Values</span>
+      <span class="consulting-area-tag">Silicon Valley Ethics</span>
+    </div>
+    <p class="section-body">Prof. Santoro firmly believes that the link between good ethics and good business is ever tightening in the modern business environment. Companies have two mechanisms for successfully managing ethics that are akin to the way your computer works. There&rsquo;s the hardware &mdash; the policies and processes that a company institutionalizes. Then there&rsquo;s the software &mdash; the company culture, the leadership and &ldquo;tone at the top.&rdquo;</p>
+    <p class="section-body">There&rsquo;s a huge competitive edge to be gained when your hardware is properly aligned to the right ethical standards. Not only does well designed hardware protect the company, but the right hardware also guides people to make choices that are both principled and profitable.</p>
+    <a href="consulting.html" class="hero-contact">Read more &rarr;</a>
+  </div>
+</section>
+
+<section class="section" id="press">
+  <div class="container">
+    <p class="section-label">In the Press</p>
+    <div class="expandable" data-max="5">
+      <div class="expandable-content">
+        <div class="press-list">
+          <a href="https://www.npr.org/2021/06/09/1004649214/senate-passed-bill-encourages-tech-competition-especially-with-china" target="_blank" rel="noopener noreferrer" class="press-item"><span class="press-source">NPR</span><span class="press-title">Senate-Passed Bill Encourages Tech Competition, Especially With China</span><span class="press-year">2021</span></a>
+          <a href="https://www.voanews.com/economy-business/apple-announces-human-rights-policy-following-criticism" target="_blank" rel="noopener noreferrer" class="press-item"><span class="press-source">VOA News</span><span class="press-title">Apple Announces Human Rights Policy Following Criticism</span><span class="press-year">2021</span></a>
+          <a href="https://www.bloomberg.com/news/articles/2019-10-14/j-j-s-legal-losses-may-get-worse-with-100-000-more-damage-claims" target="_blank" rel="noopener noreferrer" class="press-item"><span class="press-source">Bloomberg News</span><span class="press-title">J&amp;J Faces 100,000 More Damage Claims After Taking $8 Billion Hit</span><span class="press-year">2019</span></a>
+          <a href="https://www.npr.org/2019/10/11/769193163/hong-kong-protests-put-u-s-businesses-in-a-tough-spot-with-china" target="_blank" rel="noopener noreferrer" class="press-item"><span class="press-source">NPR</span><span class="press-title">Hong Kong Protests Put U.S. Businesses In A Tough Spot With China</span><span class="press-year">2019</span></a>
+          <a href="https://www.cnn.com/2017/10/12/health/nuedexta-nursing-homes-invs" target="_blank" rel="noopener noreferrer" class="press-item"><span class="press-source">CNN</span><span class="press-title">The Little Red Pill Being Pushed on the Elderly</span><span class="press-year">2017</span></a>
+          <a href="https://www.bloomberg.com/news/articles/2017-08-18/color-of-change-s-hashtag-activism-brings-trump-allies-to-heel" target="_blank" rel="noopener noreferrer" class="press-item"><span class="press-source">Bloomberg News</span><span class="press-title">Hashtag Activism Brings Trump Allies to Heel</span><span class="press-year">2017</span></a>
+          <a href="http://www.latimes.com/business/lazarus/la-fi-lazarus-fda-trump-deregulation-20170210-story.html" target="_blank" rel="noopener noreferrer" class="press-item"><span class="press-source">LA Times</span><span class="press-title">Speedy Drug Approvals Are Risky</span><span class="press-year">2017</span></a>
+          <a href="https://www.salon.com/2016/10/04/election-blindness-its-the-end-of-the-world-economy-as-we-know-it-and-we-feel-fine/" target="_blank" rel="noopener noreferrer" class="press-item"><span class="press-source">Salon</span><span class="press-title">Election Blindness: It&rsquo;s the End of the World Economy as We Know It</span><span class="press-year">2016</span></a>
+          <a href="https://www.nytimes.com/2010/04/04/business/04stream.html" target="_blank" rel="noopener noreferrer" class="press-item"><span class="press-source">New York Times</span><span class="press-title">Does Merck Agreement Pave a Road Toward Change?</span><span class="press-year">2010</span></a>
+          <a href="https://www.nytimes.com/2009/05/14/business/14vioxx.html" target="_blank" rel="noopener noreferrer" class="press-item"><span class="press-source">New York Times</span><span class="press-title">Trial Puts Spotlight on Merck</span><span class="press-year">2009</span></a>
+          <a href="https://www.finance.senate.gov/chairmans-news/witness-list-and-time-change-for-thursdays-hearing-on-chinas-accession-to-wto" target="_blank" rel="noopener noreferrer" class="press-item"><span class="press-source">U.S. Senate</span><span class="press-title">Testified Before Finance Committee on China&rsquo;s WTO Accession</span><span class="press-year">2000</span></a>
+        </div>
+      </div>
+      <a href="javascript:void(0)" class="expand-toggle" onclick="this.parentElement.classList.add('expanded'); this.style.display='none';">View all press &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="lab">
+  <div class="container">
+    <p class="section-label">MAS Business Ethics &amp; Human Rights Lab</p>
+    <p class="lab-quote">Cultivating a community that centers ethics and human rights at the heart of Jesuit business education and research.</p>
+    <p class="section-body">As the economy grows to be increasingly globalized, businesses all over the world face more human rights challenges. From supply chain to PR, every aspect of a business and decision made interacts with business ethics.</p>
+    <p class="section-body">Researchers in the Michael Santoro Business Ethics and Human Rights Lab (MS BEHR), along with professionals across the globe, explore these interactions to identify business models that address human rights. The lab is research based and composed of skilled undergraduates chosen by Professor of Management and Entrepreneurship Michael Santoro.</p>
+    <p class="section-body">The MS BEHR is one of the first undergraduate research labs of its kind. Through working closely with Professor Santoro&rsquo;s recent research, fellows think critically about current human rights challenges across multiple industries.</p>
+    <a href="https://www.scu.edu/business/management/beyond-the-classroom/MSBEHR" target="_blank" rel="noopener" class="hero-contact">Read more about the MS BEHR on the SCU website &rarr;</a>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="container">
+    <p class="section-label">Contact</p>
+    <div class="contact-grid">
+      <a href="mailto:santoro.michael@gmail.com" class="contact-card"><p class="contact-card-label">Email</p><p class="contact-card-value">santoro.michael@gmail.com</p></a>
+      <a href="https://www.scu.edu/business/management/faculty/santoro/" target="_blank" rel="noopener" class="contact-card"><p class="contact-card-label">University</p><p class="contact-card-value">Santa Clara University<br>Leavey School of Business</p></a>
+      <a href="#lab" class="contact-card"><p class="contact-card-label">Lab</p><p class="contact-card-value">MAS Business Ethics &amp;<br>Human Rights Lab</p></a>
+    </div>
+  </div>
+</section>
+
+<section class="section pull-quote">
+  <div class="container">
+    <blockquote>
+      <p>&lsquo;He who exercises power by means of his virtue may be compared to the north star, which keeps its place while all the other stars revolve around it.&rsquo;</p>
+      <cite>&mdash; Confucius</cite>
+    </blockquote>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <span class="footer-name">&copy; 2026 Michael A. Santoro</span>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/michael-santoro-43972324/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=RKDsiboAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://www.scu.edu/business/management/faculty/santoro/" target="_blank" rel="noopener">SCU Profile</a>
+        <a href="https://www.psychologytoday.com/us/contributors/michael-a-santoro-jd-phd" target="_blank" rel="noopener">Psychology Today</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
